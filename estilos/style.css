@@ -1,0 +1,1185 @@
+@charset "UTF-8";
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    background-image: url('../imagens/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    height: 135vh;
+    flex-direction: column;
+ 
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1{
+    color: white;
+}
+
+#nav ul{
+    display: flex;
+    list-style: none;
+}
+
+#nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+#nav ul li a:hover{
+    color: blue;
+    transition: 2s;
+}
+
+#bt-mobile{
+      display: none;
+}
+
+
+
+section{
+    margin-top: 150px;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+
+.slide h2{
+     margin-bottom: 15px;
+     margin-left: 90px;
+     font-size: 2.6em;
+     color: white;
+}
+
+.slide p{
+      margin-left: 90px;
+      margin-bottom: 30px;
+      width: 35%;
+      text-align: justify;
+      color: white;
+}
+
+.click a {
+     margin-left: 90px;
+     background-color: aqua;
+     color: white;
+     border-radius: 10px;
+     text-decoration: none;
+     padding: 15px;
+}
+
+.click a:hover{
+       background-color: darkblue;
+       transition: 2s;
+       border: none;
+}
+
+.slide img{
+    position: relative;
+    left: 43%;
+    margin-top: -230px;
+    width: 400px;
+    
+}
+
+.slides input{
+    display: none;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 90%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    margin-top: 130px;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 10px;
+}
+
+.manual-btn:hover{
+    background-color: aqua;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -0%;
+}
+#radio3:checked ~ .first {
+    margin-left: -0%;
+}
+
+
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: white;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: white;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: white;
+}
+
+.ana{
+    background-color: white;
+    text-align: center;
+    margin-bottom: 1000px;
+    
+}
+
+.ana h2{
+     text-align: center;
+     font-size: 2em;
+     color: darkblue;
+     
+}
+
+.ana p{
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 15px;
+    
+    
+}
+
+.ana img{
+      width: 90px;
+}
+
+.divs {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.divs div {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: lightgrey;
+}
+
+.divs h3{
+    margin-top: 10px;
+}
+
+.divs p{
+    margin-bottom: 20px;
+}
+
+.divs a{
+    text-decoration: none;
+}
+
+.divs a:hover{
+    color: darkblue;
+    transition: 2s;
+}
+
+.ana p button{
+    background-color: darkblue;
+    text-align: center;
+    padding: 10px;
+    width: 170px;
+    border: none;
+    color: white;
+}
+
+.ana p button:hover{
+      background-color: aqua;
+      transition: 2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:992px) {
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        margin: 0px;
+        background-image: url('../imagens/hero-bg\ -\ 01.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 20px;
+        height: 90vh;
+        flex-direction: column;
+        
+     
+    }
+    
+    #bt-mobile{
+           display: block;
+       }
+
+       ul#menu{
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 0px;
+            width: 50%;
+            height: 60vh;
+            line-height: 2em;
+            background-color: rgba(111, 144, 243, 0.672);
+        }
+
+
+        #nav.active ul#menu{
+               display: block;
+        }
+
+        #bt-mobile{
+            display: flex;
+            padding: 10px;
+            border: none;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            gap: 40px;
+        }
+
+        #burguer{
+             display: block;
+             border-top: 3px solid white;
+             width: 40px;
+             border-radius: 3px;
+             
+        }
+
+        #burguer::after , #burguer::before{
+                content: '';
+                display: block;
+                border-top: 3px solid white;
+                width: 40px;
+                height: 2px;
+                margin-top: 5px;
+                position: relative;
+                border-radius: 3px;
+        }
+
+        #nav.active #burguer{
+             border-top-color: transparent;
+        }
+
+        #nav.active #burguer::after{
+               transform: rotate(135deg);
+        }
+
+        #nav.active #burguer::before{
+            transform: rotate(-135deg);
+            top: 8px;
+        }
+
+        section{
+            margin-top: -30px;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+           
+            
+        }
+       
+       .slide h2{
+           color: white;
+           margin-left: 55px;
+           margin-bottom: 20px;
+           font-size: 2em;
+       }
+       
+       .slide p{
+           color: white;
+           margin-left: 55px;
+           margin-bottom: 30px;
+           text-align: justify;
+           width: 40%;
+       }
+       
+      
+       
+       .slide img{
+           position: absolute;
+           left: 56%;
+           top: 60%;
+           width: 330px;
+           
+           
+       }
+
+       .slide{
+            margin-top: 120px;
+            margin-right: 150px;
+            
+        }
+
+        .manual-btn{
+            margin-top: 160px;
+            border: 2px solid white;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .click a {
+            margin-left: 60px;
+            background-color: aqua;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            padding: 15px;
+       }
+
+       
+        .click a:hover{
+            background-color: darkblue;
+            transition: 2s;
+            border: none;
+        }
+
+
+        .ana{
+            background-color: white;
+            text-align: center;
+            margin-bottom: 1000px;
+            
+        }
+        
+        .ana h2{
+             text-align: center;
+             font-size: 2em;
+             color: darkblue;
+             
+        }
+        
+        .ana p{
+            text-align: center;
+            font-size: 1em;
+            margin-top: 15px;
+            
+            
+        }
+        
+        .ana img{
+              width: 90px;
+        }
+        
+        .divs {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .divs div {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: lightgrey;
+        }
+        
+        .divs h3{
+            margin-top: 10px;
+        }
+        
+        .divs p{
+            margin-bottom: 20px;
+            
+        }
+        
+        .divs a{
+            text-decoration: none;
+            
+        }
+        
+        .divs a:hover{
+            color: darkblue;
+            transition: 2s;
+        }
+        
+        .ana p button{
+            background-color: darkblue;
+            text-align: center;
+            padding: 10px;
+            width: 170px;
+            border: none;
+            color: white;
+        }
+        
+        .ana p button:hover{
+              background-color: aqua;
+              transition: 2s;
+        }
+
+      
+}
+
+@media screen and (max-width:768px){
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        margin: 0px;
+        background-image: url('../imagens/hero-bg\ -\ 01.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 20px;
+        height: 130vh;
+        flex-direction: column;
+        
+     
+    }
+     
+    section{
+        margin-top: 30px;
+    }
+   
+   .slide h2{
+       color: white;
+       margin-bottom: 20px;
+       font-size: 2em;
+      
+       
+   }
+   
+   .slide p{
+       color: white;
+       margin-bottom: 30px;
+       text-align: justify;
+       width: 90%;
+       
+   }
+   
+   .click a {
+        margin-left: 60px;
+        background-color: aqua;
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 15px;
+   }
+
+
+  .click a:hover{
+        background-color: darkblue;
+        transition: 2s;
+        border: none;
+}
+   
+   .slide img{
+        position: absolute;
+        left: 18%;
+        top: 100%;
+        width: 400px;
+      
+        
+    }
+
+    .manual-btn{
+        margin-top: 380px;
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .ana{
+        background-color: white;
+        text-align: center;
+        margin-top: 200px;
+        
+    }
+    
+    .ana h2{
+         text-align: center;
+         font-size: 2em;
+         color: darkblue;
+         
+    }
+    
+    .ana p{
+        text-align: center;
+        font-size: 1em;
+        margin-top: 15px;
+        
+        
+    }
+    
+    .ana img{
+          width: 90px;
+    }
+    
+    .divs {
+        width: 80%;
+        margin: auto;
+        display: block;
+        gap: 20px;
+    }
+    
+    .divs div {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: lightgrey;
+    }
+    
+    .divs h3{
+        margin-top: 10px;
+    }
+    
+    .divs p{
+        margin-bottom: 20px;
+        
+    }
+    
+    .divs a{
+        text-decoration: none;
+        
+    }
+    
+    .divs a:hover{
+        color: darkblue;
+        transition: 2s;
+    }
+    
+    .ana p button{
+        background-color: darkblue;
+        text-align: center;
+        padding: 10px;
+        width: 170px;
+        border: none;
+        color: white;
+    }
+    
+    .ana p button:hover{
+          background-color: aqua;
+          transition: 2s;
+    }
+
+    
+}
+
+  
+@media screen and (max-width: 576px){
+    main{
+        margin-top: -70px;
+        margin-left: 35px;
+       
+   }
+   
+   .slide h2{
+       color: white;
+       margin-bottom: 20px;
+       font-size: 2em;
+   }
+   
+   .slide p{
+       color: white;
+       margin-bottom: 28px;
+       text-align: justify;
+       width: 80%;
+       
+   }
+   
+  .slide img{
+        position: absolute;
+        left: 12%;
+        top: 110%;
+        width: 370px;
+       
+       
+       
+       
+    }
+
+   .click a {
+        margin-top: 180px;
+        background-color: aqua;
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 15px;
+   }
+
+   .click a:hover{
+        background-color: darkblue;
+        transition: 2s;
+        border: none;
+    }
+
+    .manual-btn{
+        position: relative;
+        right: 3%;
+        margin-top: 480px;
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .ana{
+        background-color: white;
+        text-align: center;
+        margin-top: 200px;
+        
+    }
+    
+    .ana h2{
+         text-align: center;
+         font-size: 2em;
+         color: darkblue;
+         
+    }
+    
+    .ana p{
+        text-align: center;
+        font-size: 1em;
+        margin-top: 15px;
+        
+        
+    }
+    
+    .ana img{
+          width: 90px;
+    }
+    
+    .divs {
+        width: 100%;
+        margin: auto;
+        display: block;
+        gap: 20px;
+    }
+    
+    .divs div {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: lightgrey;
+    }
+    
+    .divs h3{
+        margin-top: 10px;
+    }
+    
+    .divs p{
+        margin-bottom: 20px;
+        
+    }
+    
+    .divs a{
+        text-decoration: none;
+        
+    }
+    
+    .divs a:hover{
+        color: darkblue;
+        transition: 2s;
+    }
+    
+    .ana p button{
+        background-color: darkblue;
+        text-align: center;
+        padding: 10px;
+        width: 170px;
+        border: none;
+        color: white;
+    }
+    
+    .ana p button:hover{
+          background-color: aqua;
+          transition: 2s;
+    }
+}
+    
+     
+@media screen and (max-width: 480px){
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        margin: 0px;
+        background-image: url('../imagens/hero-bg\ -\ 01.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 20px;
+        height: 100vh;
+        flex-direction: column;
+    }
+    
+ section{
+        position: relative;
+        top: -10%;
+        right: 8%;
+       
+   }
+   
+   .slide h2{
+       color: white;
+       margin-bottom: 20px;
+       font-size: 1.7em;
+   }
+   
+   .slide p{
+       color: white;
+       text-align: justify;
+       margin-bottom: 100px;
+       width: 30%;
+       
+     
+    }
+   
+  .slide img{
+        position: absolute;
+        left: 15%;
+        top: 74%;
+        width: 300px;
+        background-color: brown;
+        
+       
+       
+}
+ .click a {
+        margin-top: 10px;
+        margin-left: 50px;
+        background-color: aqua;
+        color: white;
+        height: 200vh;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 8px;
+   }
+
+   
+    .click a:hover{
+        background-color: darkblue;
+        transition: 2s;
+        border: none;
+    }
+
+    .manual-btn{
+        position: relative;
+        margin-top: 500px;
+        left: 10%;
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .ana{
+        margin-bottom: 70px;
+        background-color: white;
+        text-align: center;
+      
+        margin-top: 200px;
+        
+    }
+    
+    .ana h2{
+         text-align: center;
+         font-size: 2em;
+         color: darkblue;
+         
+    }
+    
+    .ana p{
+        text-align: center;
+        font-size: 1em;
+        margin-top: 15px;
+        
+        
+    }
+    
+    .ana img{
+          width: 90px;
+    }
+    
+    .divs {
+        width: 80%;
+        margin: auto;
+        display: block;
+        gap: 20px;
+    }
+    
+    .divs div {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: lightgrey;
+    }
+    
+    .divs h3{
+        margin-top: 10px;
+    }
+    
+    .divs p{
+        margin-bottom: 20px;
+        
+    }
+    
+    .divs a{
+        text-decoration: none;
+        
+    }
+    
+    .divs a:hover{
+        color: darkblue;
+        transition: 2s;
+    }
+    
+    .ana p button{
+        background-color: darkblue;
+        text-align: center;
+        padding: 10px;
+        width: 170px;
+        border: none;
+        color: white;
+    }
+    
+    .ana p button:hover{
+          background-color: aqua;
+          transition: 2s;
+    }
+
+   
+}
+
+  
+   
+@media screen and (max-width: 420px){
+    main{
+        margin-top: 360px;
+        margin-left: 5px;
+   }
+   
+   .slide h1{
+       color: white;
+       margin-bottom: 20px;
+       font-size: 2em;
+      
+   }
+   
+   .slide p{
+       color: white;
+       margin-bottom: 35px;
+       text-align: justify;
+       width: 90%;
+       font-size: 1em;
+       
+   }
+   
+  .silde img{
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        width: 300px;
+        
+    }
+
+    .manual-btn{
+        margin-top: 410px;
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    
+  .serviço1 a{
+        text-decoration: none;
+        font-size: 1.3em;
+    }
+
+    .serviço1 p a:hover{
+        color: darkblue;
+        transition: 2s;
+    }
+
+
+    .botão button{
+        margin-top: 40px;
+        margin-left: 30%;
+        padding: 10px;
+        border: none;
+        width: 150px;
+        background-color: aqua;
+        border-radius: 10px;
+        font-size: 1.2em;
+    }
+
+    .botão button:hover{
+        background-color: darkblue;
+        transition: 2s;
+        color: white;
+    }
+
+    .ana{
+        margin-bottom: 40px;
+        background-color: white;
+        text-align: center;
+        margin-top: 100px;
+        
+    }
+    
+    .ana h2{
+         text-align: center;
+         font-size: 2em;
+         color: darkblue;
+         margin-left: 70px;
+         
+    }
+    
+    .ana p{
+        text-align: center;
+        font-size: 1em;
+        margin-top: 15px;
+        width: 80%;
+        margin-left: 70px;
+       
+        
+        
+    }
+    
+    .ana img{
+          width: 90px;
+    }
+    
+    .divs {
+        width: 100%;
+        margin: auto;
+        display: block;
+        gap: 20px;
+        margin-left: 30px;
+    }
+    
+    .divs div {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: lightgrey;
+    }
+    
+    .divs h3{
+        margin-top: 10px;
+    }
+    
+    .divs p{
+        margin-bottom: 20px;
+        margin-left: 30px;
+        
+    }
+    
+    .divs a{
+        text-decoration: none;
+        
+    }
+    
+    .divs a:hover{
+        color: darkblue;
+        transition: 2s;
+    }
+    
+    .ana p button{
+        background-color: darkblue;
+        text-align: center;
+        padding: 10px;
+        width: 170px;
+        border: none;
+        color: white;
+    }
+    
+    .ana p button:hover{
+          background-color: aqua;
+          transition: 2s;
+    }
+
+   
+}
+
+@media screen and (max-width: 376px){
+    main{
+        margin-top: 70px;
+        margin-left: 5px;
+   }
+   
+   .slide h1{
+       color: white;
+       margin-bottom: 20px;
+       font-size: 1em;
+   }
+   
+   .slide p{
+       color: white;
+       margin-bottom: 20px;
+       text-align: justify;
+       width: 50%;
+   }
+   
+  
+   
+   .slide img{
+        position: absolute;
+        left: 10%;
+        top: 65%;
+        width: 100px;
+      
+        
+    }
+
+   
+    .manual-btn{
+        margin-top: 450px;
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .ana{
+        background-color: white;
+        text-align: center;
+        margin-top: 200px;
+        
+    }
+    
+    .ana h2{
+         text-align: center;
+         font-size: 2em;
+         color: darkblue;
+         
+    }
+    
+    .ana p{
+        text-align: center;
+        font-size: 1em;
+        margin-top: 15px;
+        
+        
+    }
+    
+    .ana img{
+          width: 90px;
+    }
+    
+    .divs {
+        width: 100%;
+        margin: auto;
+        display: block;
+        gap: 20px;
+    }
+    
+    .divs div {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: lightgrey;
+    }
+    
+    .divs h3{
+        margin-top: 10px;
+    }
+    
+    .divs p{
+        margin-bottom: 20px;
+        
+    }
+    
+    .divs a{
+        text-decoration: none;
+        
+    }
+    
+    .divs a:hover{
+        color: darkblue;
+        transition: 2s;
+    }
+    
+    .ana p button{
+        background-color: darkblue;
+        text-align: center;
+        padding: 10px;
+        width: 170px;
+        border: none;
+        color: white;
+    }
+    
+    .ana p button:hover{
+          background-color: aqua;
+          transition: 2s;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
