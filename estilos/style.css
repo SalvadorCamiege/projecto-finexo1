@@ -765,10 +765,7 @@ section{
     }
     
  section{
-        position: relative;
-        top: -10%;
-        right: 8%;
-       
+        margin-top: 30px;
    }
    
    .slide h2{
@@ -789,9 +786,9 @@ section{
   .slide img{
         position: absolute;
         left: 15%;
-        top: 74%;
-        width: 300px;
-        background-color: brown;
+        top: 84%;
+        width: 320px;
+    
         
        
        
@@ -817,7 +814,7 @@ section{
     .manual-btn{
         position: relative;
         margin-top: 500px;
-        left: 10%;
+        left: 5%;
         border: 2px solid white;
         padding: 5px;
         border-radius: 10px;
